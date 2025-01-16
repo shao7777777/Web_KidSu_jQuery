@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>相片效果</title>
-    <link rel="sytlesheeet" href="./style.css">
+    <link rel="stylesheet" href="./slider.css">
 </head>
 <body>
-    <h1>測試標題</h1>
+    <!-- 相片效果區域 -->
+    <section class="slider-container">
+        <!-- 所有相片 -->
+        <div class="slider-imgs">
+            <!-- 相片區 -->
+            <div class="slider">
+                <img src="./img/1.jpg" alt="海邊">
+                <h1>夕陽剪影</h1>
+            </div>
+            <div class="slider">
+                <img src="./img/2.jpg" alt="海邊">
+                <h1>路人行橋</h1>
+            </div>
+            <div class="slider active">
+                <img src="./img/3.jpg" alt="海邊">
+                <h1>海上衝浪</h1>
+            </div>
+            <div class="slider">
+                <img src="./img/4.jpg" alt="海邊">
+                <h1>海風吹拂</h1>
+            </div>
+            <div class="slider">
+                <img src="./img/5.jpg" alt="海邊">
+                <h1>日落餘暉</h1>
+            </div>
+        </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./slider.js"></script>
 </body>

@@ -1,5 +1,78 @@
+/* 匯入 Google Fonts 字體 */
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 微軟正黑體;
+    font-family: "LXGW WenKai TC", 微軟正黑體;
+}
+
+/* 相片效果區域樣式 */
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    /* vh = view height，指螢幕可視範圍高度的百分比 */
+    background: #a0e4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 所有相片 */
+.slider-imgs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 相片 div*/
+.slider {
+    width: 150px;
+    height: 500px;
+        /* 改變游標 */
+    cursor: pointer;
+    transition: 0.5s;
+    /* ⭐定位：父元素添加相對定位(告訴子元素，你要相對於我來定位) */
+    position: relative;
+}
+
+/* 相片 */
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 選取第一張和最後一張 */
+/* .slider-imgs .slider:first-child  */
+/* 選取 .slider-imgs 下第一個 .slider 元素 */
+.slider-imgs .slider:first-child, .slider-imgs .slider:last-child {
+    height: 400px;
+}
+
+/* 選取指定相片 */
+/* .slider-imgs .slider:nth-child(元素編號)  */
+/* 選取 .slider-imgs 下第二個 .slider 元素 */
+.slider-imgs .slider:nth-child(2), .slider-imgs .slider:nth-child(4) {
+    height: 450px;
+}
+
+.slider h1 {
+    font-size: 36px;
+    color: #fff;
+    /* ⭐定位：子元素添加絕對定位(子元素要根據父元素來做絕對定位) */
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transition: 0.5s;
+}
+
+/* 相片啟動效果 */
+.slider.active {
+    /* 與上方樣式發生衝突，所以提高權限 */
+    width: 450px !important;
+}
+
+.slider.active h1 {
+    display: none;
 }
